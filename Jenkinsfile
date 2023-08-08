@@ -5,12 +5,12 @@ pipeline {
     stage('Install') {
       steps {
         sh 'npm install'
-        stages ('Build') {
+      }
+        stage ('Build') {
             steps {
                 sh 'npm run build'
             }
         }
       }
     }
-  }
 }
